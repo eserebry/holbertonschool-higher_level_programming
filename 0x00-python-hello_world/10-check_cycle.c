@@ -6,7 +6,7 @@
  *
  * @head: pointer to a head node of the list
  *
- * Return: returns 0 if cycle is found, 1 if it doesn't
+ * Return: returns 1 if cycle is found, 0 if it doesn't
  */
 int check_cycle(listint_t *head)
 {
@@ -22,7 +22,7 @@ int check_cycle(listint_t *head)
 		slow = slow->next;
 		fast = fast->next->next;
 		if (fast == slow)
-			return (0);
+			return (1);
 	}
-	return (1);
+	return (0);
 }
