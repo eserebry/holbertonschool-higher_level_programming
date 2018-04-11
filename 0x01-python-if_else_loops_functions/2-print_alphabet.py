@@ -1,2 +1,4 @@
 #!/usr/bin/python3
-print("abcdefghijklmnopqrstuvwxyz", end="")
+i = 0
+for i in range(97, 123):
+    print(chr(i), end="")
