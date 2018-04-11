@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PYCODE > code.py | python code.py
+python -c "$PYCODE"
