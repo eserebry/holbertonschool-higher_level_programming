@@ -7,6 +7,3 @@ def magic_calculation(a, b):
             c = add(c, i)
     else:
         c = sub(a, b)
-
-import dis
-dis.dis(magic_calculation)
