@@ -8,7 +8,7 @@ def roman_to_int(roman_string):
             "D": 500,
             "M": 1000}
     total = 0
-    if roman_string is not None:
+    if roman_string is not None and type(roman_string) == str:
         prev = 1001
         for key in roman_string:
             if dict[key] > prev:
