@@ -10,10 +10,11 @@ def roman_to_int(roman_string):
     total = 0
     if roman_string is not None:
         prev = 1001
-    for key in roman_string:
-        if dict[key] > prev:
-            total += dict[key] - (prev*2)
-        else:
-            total += dict[key]
-        prev = dict[key]
-    return total
+        for key in roman_string:
+            if dict[key] > prev:
+                total += dict[key] - (prev*2)
+            else:
+                total += dict[key]
+                prev = dict[key]
+        return total
+    return 0
