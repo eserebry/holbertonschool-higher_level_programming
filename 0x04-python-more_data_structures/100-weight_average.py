@@ -9,4 +9,4 @@ def weight_average(my_list=[]):
             bottom += i[1]
         result = top / bottom
         return result
-    return None
+    return 0
