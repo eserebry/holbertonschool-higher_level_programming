@@ -7,7 +7,7 @@ def safe_print_list_integers(my_list=[], x=0):
             if i <= x:
                 print("{:d}".format(i), end="")
                 real += 1
-        except (IndexError, ValueError):
+        except (TypeError, ValueError):
             return None
     print(end="\n")
     return real
