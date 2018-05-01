@@ -5,7 +5,7 @@ def safe_print_list_integers(my_list=[], x=0):
     for i in my_int_list:
         try:
             if i <= x:
-                print("{:d}" .format(i), end="")
+                print("{:d}".format(i), end="")
                 real += 1
         except IndexError:
             return None
