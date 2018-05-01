@@ -1,13 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
     real = 0
-    my_int_list = [x for x in my_list if isinstance(x, int)]
-    for i in my_int_list:
+    for i in range(0, x):
         try:
-            if i <= x:
-                print("{:d}".format(i), end="")
-                real += 1
+            print("{:d}".format(my_list[i]), end="")
+            real += 1
         except (TypeError, ValueError):
-            return None
+            continue
     print(end="\n")
     return real
