@@ -2,19 +2,19 @@
 class Square:
     """modul that defines a square"""
     def __init__(self, size=0, position=(0, 0)):
-        self.__size = size
-        self.__position = position
         if isinstance(size, int) is not True:
             raise TypeError("size must be an integer")
         if (size < 0):
             raise ValueError("size must be >= 0")
         if isinstance(position, tuple) is False or len(position) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(position[0], int) is False or\
+        if isinstance(position[0], int) is False or\
            isinstance(position[1], int) is False:
             raise TypeError("position must be a tuple of 2 positive integers")
         if position[0] < 0 or position[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
+        self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -36,7 +36,7 @@ class Square:
     def position(self, value):
         if isinstance(value, tuple) is False or len(value) is not 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) is False or\
+        if isinstance(value[0], int) is False or\
            isinstance(value[1], int) is False:
             raise TypeError("position must be a tuple of 2 positive integers")
         if value[0] < 0 or value[1] < 0:
