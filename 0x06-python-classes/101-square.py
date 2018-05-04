@@ -65,11 +65,14 @@ class Square:
         if self.__size == 0:
             return str
         for j in range(self.__position[1]):
-            str = ""
+            str += "\n"
         for i in range(self.__size):
             for l in range(self.__position[0]):
                 str += " "
             for k in range(self.__size):
                 str += "#"
-            str += "\n"
+            if (i == self.__size - 1):
+                str += ""
+            else:
+                str += "\n"
         return str
