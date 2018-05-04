@@ -1,3 +1,4 @@
+
 #!/usr/bin/python3
 class Square:
     """modul that defines a square"""
@@ -65,7 +66,7 @@ class Square:
         if self.__size == 0:
             return str
         for j in range(self.__position[1]):
-            str = "\n"
+            str = ""
         for i in range(self.__size):
             for l in range(self.__position[0]):
                 str += " "
