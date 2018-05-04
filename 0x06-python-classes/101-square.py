@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 class Square:
     """modul that defines a square"""
