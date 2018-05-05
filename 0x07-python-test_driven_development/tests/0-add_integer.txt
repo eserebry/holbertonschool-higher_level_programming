@@ -1,0 +1,83 @@
+The ``0-add_integer`` module
+======================
+
+Using ``add_integer``
+-------------------
+
+Importing ``add_integer`` from the ``0-add_integer`` module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Numbers
+=======
+
+Checking for the right output:
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(100, -2)
+    98
+
+    >>> add_integer(-2, 100)
+    98
+    
+    >> add_integer(-2, -2)
+    -4
+	
+    >>> add_integer(2, )
+    100
+
+    >>> add_integer(100.3, -2)
+    98
+
+    >>> add_integer(-2, 100.3)
+    98
+
+    >>> add_integer(2.2, 2.2)
+    4
+
+Others
+=======
+
+Cheking for the incorrect output:
+
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer("School", 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer("School", "School")
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+    
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer("c", 5)    
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>>	add_integer(5, "c")
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>>	add_integer([1,2], 5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(5, [1, 2])
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+    
+    >>>	add_integer({1,2}, 5)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(5, {1, 2})
+    Traceback (most recent call last):
+    TypeError: b must be an integer
