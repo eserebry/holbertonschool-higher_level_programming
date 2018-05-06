@@ -1,0 +1,127 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``text_indentation``
+-------------------
+
+Importing ``text_indentation`` from the ``5-text_indentation`` module:
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+String
+=======
+
+Checking for the right output:
+
+    >>> text_indentation("Hello? World")
+    Hello?
+    <BLANKLINE>
+    World
+
+    >>>	text_indentation("Hello. World")
+    Hello.
+    <BLANKLINE>
+    World
+
+    >>>	text_indentation("Hello: World")
+    Hello:
+    <BLANKLINE>
+    World
+
+    >>>	text_indentation("")
+    <BLANKLINE>
+
+    >>> text_indentation(":")
+    :
+
+    >>> text_indentation("?")
+    ?
+
+    >>> text_indentation(".")
+    .
+
+    >>> text_indentation("?Hello World")
+    ?
+    <BLANKLINE>
+    ello World
+
+    >>> text_indentation(".Hello World")
+    .
+    <BLANKLINE>
+    ello World
+
+    >>> text_indentation(":Hello World")
+    :
+    <BLANKLINE>
+    ello World
+
+    >>> text_indentation("?:.Hello World")
+    ?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    ello World
+
+    >>> text_indentation("Hello:?. World")
+    Hello:
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    World
+
+    >>> text_indentation("He?llo W.or:ld")
+    He?
+    <BLANKLINE>
+    lo W.
+    <BLANKLINE>
+    r:
+    <BLANKLINE>
+    d
+
+    >>> text_indentation("Hello World?.:")
+    Hello World?
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+    <BLANKLINE>
+
+Others
+=======
+
+Cheking for the incorrect output:
+
+    >>> text_indentation(1)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>>	text_indentation(1)
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(1, 2)
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+    >>> text_indentation((1, 2))
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation({"Hello", "World"})
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation(["Hello, World"])
+    Traceback (most recent call last):
+    TypeError: text must be a string
+
+    >>> text_indentation()
+    Traceback (most recent call last):
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+    >>> text_indentation("Hello", "World")
+    Traceback (most recent call last):
+    TypeError: text_indentation() takes 1 positional argument but 2 were given
