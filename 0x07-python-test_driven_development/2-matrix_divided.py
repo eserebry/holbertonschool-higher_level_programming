@@ -1,5 +1,15 @@
 #!/usr/bin/python3
+"""
+    My calculation module
+
+"""
+
+
 def matrix_divided(matrix, div):
+    """
+        Function that divides all elements of a matrix.
+
+    """
     new_matrix = []
     if isinstance(matrix, list) is False:
             raise TypeError("matrix must be a matrix " +
