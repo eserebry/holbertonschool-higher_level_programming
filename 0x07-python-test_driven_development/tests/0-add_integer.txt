@@ -81,3 +81,7 @@ Cheking for the incorrect output:
     >>> add_integer(5, {1, 2})
     Traceback (most recent call last):
     TypeError: b must be an integer
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
