@@ -41,6 +41,7 @@ class Rectangle:
         perimeter = (self.__width + self.__height) * 2
         return perimeter
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         if isinstance(rect_1, Rectangle) is False:
             raise TypeError("rect_1 must be an instance of Rectangle")
