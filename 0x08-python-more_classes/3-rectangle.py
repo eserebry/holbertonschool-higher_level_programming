@@ -39,6 +39,8 @@ class Rectangle:
 
     def __str__(self):
         my_rect = ""
+        if self.__height == 0 or self.__width == 0:
+            return "\n"
         for i in range(self.__height):
             for k in range(self.__width):
                 my_rect += "#"
