@@ -66,7 +66,7 @@ class Rectangle:
     def __str__(self):
         my_rect = ""
         if self.__height == 0 or self.__width == 0:
-            return "\n"
+            return my_rect
         if isinstance(self.print_symbol, str) is False:
             self.print_symbol = str(self.print_symbol)
         for i in range(self.__height):
