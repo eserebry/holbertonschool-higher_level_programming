@@ -5,6 +5,14 @@ class Rectangle:
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
+        if isinstance(width, int) is False:
+            raise TypeError("width must be an integer")
+        if isinstance(height, int) is False:
+            raise TypeError("height must be an integer")
+        if width < 0:
+            raise ValueError("width must be >= 0")
+        if height < 0:
+            raise ValueError("height must be >= 0")
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
@@ -38,7 +46,10 @@ class Rectangle:
         return area
 
     def perimeter(self):
-        perimeter = (self.__width + self.__height) * 2
+        if self.__width == 0 or self.__height == 0:
+            perimeter = 0
+        else:
+            perimeter = (self.__width + self.__height) * 2
         return perimeter
 
     @staticmethod
