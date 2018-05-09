@@ -3,7 +3,7 @@ class Rectangle:
     """ class defines rectangle """
     def __init__(self, width=0, height=0):
         if isinstance(width, int) is False:
-            raise TypeError("height must be an integer")
+            raise TypeError("width must be an integer")
         if isinstance(height, int) is False:
             raise TypeError("height must be an integer")
         if width < 0:
