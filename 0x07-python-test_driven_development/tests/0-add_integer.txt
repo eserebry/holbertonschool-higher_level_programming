@@ -89,3 +89,11 @@ Cheking for the incorrect output:
     >>> add_integer(1, 2, 3)
     Traceback (most recent call last):
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+    >>> add_integer(float('inf'), 1)
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(-float('inf'), 1)	
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
