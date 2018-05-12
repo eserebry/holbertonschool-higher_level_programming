@@ -11,13 +11,13 @@ def text_indentation(text):
     after each of these characters: ., ? and :
 
     """
+    new_string = ""
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
     for i in range(len(text)):
-        if (text[i - 1] == "." or text[i - 1] == "?" or text[i - 1] == ":")\
-           and i != 0:
-            print()
-            print()
+        if ((text[i - 1] == '.' or text[i - 1] == '?' or text[i - 1] == ":")  and (i is not 0)):
+            new_string += "\n\n"
         else:
-            print(text[i], end="")
-    print()
+            new_string += text[i]
+        if (i + 1  == len(text)):
+            print("{}".format(new_string), end="")
