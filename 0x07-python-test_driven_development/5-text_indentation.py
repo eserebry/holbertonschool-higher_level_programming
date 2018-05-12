@@ -18,7 +18,6 @@ def text_indentation(text):
            and i != 0:
             print()
             print()
-            print(text[i], end="")
         else:
             print(text[i], end="")
     print()
