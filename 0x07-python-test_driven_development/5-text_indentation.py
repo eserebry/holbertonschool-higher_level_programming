@@ -11,6 +11,8 @@ def text_indentation(text):
     after each of these characters: ., ? and :
 
     """
+    if text == "":
+        print()
 
     if isinstance(text, str) is False:
         raise TypeError("text must be a string")
