@@ -18,6 +18,26 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ValueError: age must be greater than 0
 
+>>> BG.integer_validator("age", {1,2})
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> BG.integer_validator("age", (1, 2))
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> BG.integer_validator("age", [1, 2])
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> BG.integer_validator("age", "hello")
+Traceback (most recent call last):
+TypeError: age must be an integer
+
+>>> BG.integer_validator("age")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
 >>> BG.integer_validator("distance", -4)
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
@@ -26,3 +46,22 @@ ValueError: distance must be greater than 0
 Traceback (most recent call last):
 ValueError: distance must be greater than 0
 
+>>> BG.integer_validator("distance", {1, 2})
+Traceback (most recent call last):
+TypeError: distance must be an integer
+
+>>> BG.integer_validator("distance", [1, 2])
+Traceback (most recent call last):
+TypeError: distance must be an integer
+
+>>> BG.integer_validator("distance", (1, 2))
+Traceback (most recent call last):
+TypeError: distance must be an integer
+
+>>> BG.integer_validator("distance", "hello")
+Traceback (most recent call last):
+TypeError: distance must be an integer
+
+>>> BG.integer_validator("distance")
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
