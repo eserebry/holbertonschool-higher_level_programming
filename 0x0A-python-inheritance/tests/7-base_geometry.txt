@@ -6,6 +6,10 @@ Checking for the right output:
 >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 >>> BG = BaseGeometry()
 
+>>> BG.integer_validator("age", 5)
+
+>>> BG.integer_validator("distance", 4)
+
 >>> BG.integer_validator("name", "John")
 Traceback (most recent call last):
 TypeError: name must be an integer
