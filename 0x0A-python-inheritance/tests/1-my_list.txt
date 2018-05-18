@@ -25,5 +25,9 @@ Checking for the right output:
 >>> my_list.print_sorted()
 [0, 1]
 
->>> my_list.print_sorted()
-[0, 1]
+>>> my_list2 = MyList()
+>>> print(my_list2)
+[]
+
+>>> my_list2.print_sorted()
+[]
