@@ -25,3 +25,5 @@ Checking for the right output:
 >>> my_list.print_sorted()
 [0, 1]
 
+>>> my_list.print_sorted()
+[0, 1]
