@@ -20,3 +20,16 @@ class Square(Rectangle):
         """ returns string with the square arguments"""
         return "[Square] (%s) %s/%s - %s" % \
             (self.id, self.x, self.y, self.width)
+
+    @property
+    def size(self):
+        """ returns size of the square"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """ get size
+        Args:
+            value (int): value
+        """
+        self.width = value
