@@ -107,9 +107,8 @@ class Rectangle(Base):
         """ prints the Rectangle with height and lenght parameters"""
         for i in range(self.__y):
             print()
-        for j in range(self.__x):
-            for k in range(self.__height):
-                print(" " * self.__x, end="")
-                for l in range(self.__width):
-                    print("#", end="")
-                print()
+        for k in range(self.__height):
+            print(" " * self.__x, end="")
+            for l in range(self.__width):
+                print("#", end="")
+            print()
