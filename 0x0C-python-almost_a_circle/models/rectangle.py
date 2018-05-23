@@ -94,7 +94,7 @@ class Rectangle(Base):
     def display(self):
         """ displays rectangle"""
         for i in range(self.__height):
-            for j in range(self.width):
+            for j in range(self.__width):
                 print("#", end="")
             print()
 
@@ -102,3 +102,14 @@ class Rectangle(Base):
         """ returns string with the rectangle arguments"""
         return "[Rectangle] (%s) %s/%s - %s/%s" % \
             (self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def display(self):
+        """ prints the Rectangle with height and lenght parameters"""
+        for i in range(self.__y):
+            print()
+        for j in range(self.__x):
+            for k in range(self.__height):
+                print(" " * self.__x, end="")
+                for l in range(self.__width):
+                    print("#", end="")
+                print()
