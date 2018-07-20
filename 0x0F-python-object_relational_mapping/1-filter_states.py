@@ -3,6 +3,7 @@
 lists all states with a name starting with N
 """
 
+
 def list_states():
     db = MySQLdb.connect(host='localhost',
                          port=3306,
