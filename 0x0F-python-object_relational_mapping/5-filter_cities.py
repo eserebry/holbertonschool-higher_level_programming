@@ -20,6 +20,6 @@ if __name__ == "__main__":
     WHERE states.name=%s \
     ORDER BY cities.id", (sys.argv[4], ))
     result = cur.fetchall()
-    print(', '.join('='.join(t) for t in result))
+    print(', '.join('='.join(row) for row in result))
     cur.close()
     db.close()
