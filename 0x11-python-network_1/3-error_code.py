@@ -15,4 +15,4 @@ if __name__ == "__main__":
             utf_8 = the_page.decode('utf-8')
         print(utf_8)
     except urllib.error.URLError as e:
-        print(e.code)
+        print("Error code: {}".format(e.code))
